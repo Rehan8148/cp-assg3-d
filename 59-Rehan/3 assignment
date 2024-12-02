@@ -1,0 +1,82 @@
+*
+  Roll No.: 59
+  Student Name: Rehan Qureshi
+  Program Title: Simple Calculator
+
+  Task Given By:
+    - Roll No. of Assignee: 58
+    - Assignee Name: hamza siddiqui
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Function to add two numbers
+double add(double num1, double num2) {
+    return num1 + num2;
+}
+
+// Function to subtract two numbers
+double subtract(double num1, double num2) {
+    return num1 - num2;
+}
+
+// Function to multiply two numbers
+double multiply(double num1, double num2) {
+    return num1 * num2;
+}
+
+// Function to divide two numbers with error handling
+double divide(double num1, double num2) {
+    if (num2 == 0) {
+        printf("Error: Division by zero!\n");
+        exit(1); // Exit program with error code
+    }
+    return num1 / num2;
+}
+
+int main() {
+    double num1, num2;
+    char operation;
+ printf("Simple Calculator\n");
+    printf("-----------------\n");
+    printf("Enter first number: ");
+    scanf("%lf", &num1);
+    printf("Enter operation (+, -, *, /): ");
+    scanf(" %c", &operation);
+    printf("Enter second number: ");
+    scanf("%lf", &num2);
+
+    switch (operation) {
+        case '+':
+            printf("Result: %.2lf\n", add(num1, num2));
+            break;
+        case '-':
+            printf("Result: %.2lf\n", subtract(num1, num2));
+            break;
+        case '*':
+            printf("Result: %.2lf\n", multiply(num1, num2));
+            break;
+        case '/':
+            printf("Result: %.2lf\n", divide(num1, num2));
+            break;
+        default:
+            printf("Error: Invalid operation!\n");
+    }
+
+return 0;
+}
+
+/*
+
+Simple Calculator
+-----------------
+Enter first number: 45
+Enter operation (+, -, *, /): +
+Enter second number: 56
+Result: 101.00
+
+/*
+
+
+
